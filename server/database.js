@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+mongoose.set('strictQuery', false)
 const { stringify } = require('querystring');
 mongoose.connect("mongodb://0.0.0.0/catsdogs",{ 
     useNewUrlParser: true,

@@ -29,7 +29,7 @@ const login = () => {
   };
   const getUserFromDB = () => {
     axios
-      .post("http://localhost:3001/user/login", {
+      .post("http://localhost:3000/user/login", {
        
         Uemail: email,
      
