@@ -4,18 +4,7 @@ const { User, Product} = require("../database");
 const cloudinary = require("../cloudinary");
 
 
-const deleteProduct = async (req, res) => {
-  let id = req.params.id
-  try {
-    Product.deleteOne({ Pname: id }, (err, result) => {
-      if (err) console.log(err)
-      res.json(result)
-    })
 
-  } catch (error) {
-    res.json(error)
-  }
-}
 
 
 
@@ -153,29 +142,29 @@ const UpdateUser = async (req, res) => {
 
 
 
-const addProduct = async (req, res) => {
+// const addProduct = async (req, res) => {
 
-  const body = req.body
-  console.log(body);
-  try {
-    await Product.create(body, (err, result) => {
-      if (err) res.json(err)
-      res.json(result)
-    })
-  }
-  catch (err) {
-    console.log(err);
-  }
-}
+//   const body = req.body
+//   console.log(body);
+//   try {
+//     await Product.create(body, (err, result) => {
+//       if (err) res.json(err)
+//       res.json(result)
+//     })
+//   }
+//   catch (err) {
+//     console.log(err);
+//   }
+// }
 
-const GetAllProducts = async (req, res) => {
-  try {
-    await Product.find({}).then(result => { res.json(result) })
-  }
-  catch (err) {
-    res.json(err)
-  }
-}
+// const GetAllProducts = async (req, res) => {
+//   try {
+//     await Product.find({}).then(result => { res.json(result) })
+//   }
+//   catch (err) {
+//     res.json(err)
+//   }
+// }
 const getUser = async (req, res) => {
   const username = req.params.name
   try {
