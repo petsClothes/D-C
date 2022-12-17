@@ -9,9 +9,6 @@ import {
 } from "firebase/auth";
 import { auth } from "../firebase-config.js";
 import axios from "axios";
-// import { useNavigate } from "react-router-dom";
-// const navigate = useNavigate();
-
 const login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -29,7 +26,7 @@ const login = () => {
   };
   const getUserFromDB = () => {
     axios
-      .post("http://localhost:3000/user/login", {
+      .post("http://localhost:5000/user/login", {
        
         Uemail: email,
      
@@ -62,7 +59,7 @@ window.location.href='/home'
       alert("Password reset link sent!");
     } catch (err) {
       console.error(err);
-      alert(err.message);
+      // alert(err.message);
     }
   };
   // const  getCurrentUser =() =>{
@@ -72,33 +69,7 @@ window.location.href='/home'
   // }
   return (
     <div>
-      <nav
-        className="relative flex h-12 items-center px-4 justify-between shadow-md dark:shadow-gray-700"
-        style={{ height: "70px" }}
-      >
-        <img
-          src="https://res.cloudinary.com/dnwi9wvci/image/upload/v1670936284/1_rdfnhm.png"
-          className="logo"
-          style={{ width: "200px", height: "170px" }}
-          alt=""
-        />
-
-        <div>
-          
-          {user ? (
-            <div>
-             
-              <Link href="" className="p-2 text-dark">
-                <button onClick={logOut}>log out</button>
-              </Link>
-            </div>
-          ) : (
-            <Link href="/login" className="p-2 text-dark">
-              Login
-            </Link>
-          )}
-        </div>
-      </nav>
+     
 
       <section className="h-full gradient-form bg-gray-200 md:h-screen">
         <div className="container py-12 px-6 h-full">

@@ -9,9 +9,6 @@ import {
 } from "firebase/auth";
 import { auth } from "../firebase-config.js";
 import axios from "axios";
-// import { useNavigate } from "react-router-dom";
-// const navigate = useNavigate();
-
 const signup = () => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
@@ -32,7 +29,7 @@ const signup = () => {
 
   const addUserToDB = () => {
      axios
-       .post("http://localhost:3000/user/signup", {
+       .post("http://localhost:5000/user/signup", {
          Uname: name,
          Uemail: email,
          Uimage: image,
@@ -42,6 +39,7 @@ const signup = () => {
          console.log(res.data);
          
          console.log(`${name} is added `);
+         alert(res.data.message)
        })
        .catch((err) => {
          console.error(err);
@@ -60,49 +58,17 @@ const signup = () => {
       //? i want navigate to home page 
       // <Link href="/home" className="p-2 text-dark"></Link>;
       // router.push('/login')
+      // alert(user)
      routes.push('/home')
     } catch (error: any) {
+      alert(error)
       console.log(error);
     }
   };
 
   return (
     <div>
-      <nav
-        className="relative flex h-12 items-center px-4 justify-between shadow-md dark:shadow-gray-700"
-        style={{ height: "70px" }}
-      >
-        <img
-          src="https://res.cloudinary.com/dnwi9wvci/image/upload/v1670936284/1_rdfnhm.png"
-          className="logo"
-          style={{ width: "200px", height: "170px" }}
-          alt=""
-        />
-
-        <div>
-         
-          
-
-          
-         
-         
-          
-          {/* {user ? ( */}
-            <div>
-              <Link href="" className="p-2 text-dark">
-                {/* welcome {"   "} {user.email} */}
-              </Link>
-              <Link href="" className="p-2 text-dark">
-                <button onClick={logOut}>log out</button>
-              </Link>
-            </div>
-          {/* ) : ( */}
-            <Link href="/login" className="p-2 text-dark">
-              Login
-            </Link>
-          {/* )} */}
-        </div>
-      </nav>
+      
 
       <section className="h-full gradient-form bg-gray-200 md:h-screen">
         <div className="container py-12 px-6 h-full">
