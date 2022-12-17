@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+
 import {
   createUserWithEmailAndPassword,
   onAuthStateChanged,
@@ -11,6 +12,7 @@ import { auth } from "../firebase-config.js";
 import axios from "axios";
 // import { useNavigate } from "react-router-dom";
 // const navigate = useNavigate();
+ 
 
 const login = () => {
   const [email, setEmail] = useState("");
@@ -29,7 +31,7 @@ const login = () => {
   };
   const getUserFromDB = () => {
     axios
-      .post("http://localhost:3000/user/login", {
+      .post("http://localhost:5000/user/login", {
        
         Uemail: email,
      
@@ -62,7 +64,7 @@ window.location.href='/home'
       alert("Password reset link sent!");
     } catch (err) {
       console.error(err);
-      alert(err.message);
+      // alert(err.message);
     }
   };
   // const  getCurrentUser =() =>{

@@ -38,14 +38,14 @@ const collection = () => {
  
  
   const filter = (para:any) => {
-    axios.get(`http://localHost:3001/user/filter/${para}`).then(res => {
+    axios.get(`http://localHost:5000/user/filter/${para}`).then(res => {
       console.log(res.data);
       
       setAllProducts(res.data)
     })
   }
   const filters = (para:any) => {
-    axios.get(`http://localHost:3001/user/filters/${para}`).then(res => {
+    axios.get(`http://localHost:5000/user/filters/${para}`).then(res => {
       console.log(res.data , "marym" );
       
       setAllProducts(res.data)
@@ -53,7 +53,7 @@ const collection = () => {
   }
   // const [searching,setSearching]=useState('')
   useEffect(() => {
-    axios.get("http://localHost:3000/user/getAllProduct").then(res => {
+    axios.get("http://localHost:5000/user/getAllProduct").then(res => {
       setAllProducts(res.data)
       console.log(res.data.message);
       
@@ -217,8 +217,9 @@ const collection = () => {
           </div>
         </div>
         <div className="row">
-
+         
         {  allProducts && allProducts.map((e)=>{
+         {console.log(allProducts)}
           return (
              <>
           <div className="col-md-4">
