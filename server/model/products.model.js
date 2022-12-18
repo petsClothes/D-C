@@ -2,14 +2,18 @@ const mongoose = require ('mongoose')
 
 
 const ProductsSchema =new mongoose.Schema({
+    type:{
+        type:String ,
+        enum :['cats','dogs','kittens','puppies']
+    },
     productname:{
         type:String,
         require:true,
     },
     categorie:{
         type:String,
-        // enum:['coats&jackets','sweaters&hoodies','shirts&dresses','accessories']
-        require:true,
+        enum:['coats&jackets','sweaters&hoodies','shirts&dresses','accessories'],
+       
     },
     imageUrl:{
         type:String,

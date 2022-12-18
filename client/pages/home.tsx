@@ -14,11 +14,11 @@ import axios from "axios";
 
 
 const images = [
-  { url: "https://blogs-images.forbes.com/ceciliarodriguez/files/2018/01/moncler-dog-jackets-mondog-.jpg" },
-  { url: "https://media.gucci.com/content/DiaryHeroArticle_Standard_1600x812/1655895611/DiaryHeroArticle_Gucci-Pet-Collection-01_001_Default.jpg" },
-  { url: "https://powerofthepaw.org/wp-content/uploads/2021/02/4-870x400.jpeg" },
-  { url: "https://www.foundanimals.org/wp-content/uploads/2019/01/pet-accessories.jpg" },
-  { url: "https://www.k9ofmine.com/wp-content/uploads/2021/12/dog-modeling-jobs.jpg" },
+  { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsAZFxtgnQAYXdRsBwgIsGqDmuRIoSDIB4FQ&usqp=CAU" },
+  { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSkEWcteg2_7m3YXZHNjnF8VqWTDFPncBfJA&usqp=CAU" },
+  { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwqW8KFg0fz7WDduHctZlEgGH1mFapi0t_fg&usqp=CAU" },
+  { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfiCv9hBByu6Q6uZokkJKB33j2wGGOU7kPAegyPIJci2zuVRoNYuU08rWiql7GZUNvt_c&usqp=CAU" },
+  { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc8c2l0JtbQrYAnKCvqL_jx2tT3avOt0fcoA&usqp=CAU" },
 
   
 ];
