@@ -176,7 +176,7 @@ const collection = () => {
               <div className="card rounded-0">
                 <img id="im"
                   className="card-img rounded-0 img-fluid"
-                  src={e.image}
+                  src={e.imageUrl}
                   
                 />
                 

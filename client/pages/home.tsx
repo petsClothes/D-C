@@ -1,5 +1,5 @@
-import React , { useEffect, useState } from 'react'
-import Link from "next/link"
+import React, { useEffect, useState } from "react";
+import Link from "next/link";
 import SimpleImageSlider from "react-simple-image-slider";
 
 import {
@@ -12,89 +12,114 @@ import {
 import { auth } from "../firebase-config.js";
 import axios from "axios";
 
-
 const images = [
-  { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsAZFxtgnQAYXdRsBwgIsGqDmuRIoSDIB4FQ&usqp=CAU" },
-  { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSkEWcteg2_7m3YXZHNjnF8VqWTDFPncBfJA&usqp=CAU" },
-  { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwqW8KFg0fz7WDduHctZlEgGH1mFapi0t_fg&usqp=CAU" },
-  { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfiCv9hBByu6Q6uZokkJKB33j2wGGOU7kPAegyPIJci2zuVRoNYuU08rWiql7GZUNvt_c&usqp=CAU" },
-  { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc8c2l0JtbQrYAnKCvqL_jx2tT3avOt0fcoA&usqp=CAU" },
-
-  
+  {
+    url: "https://blogs-images.forbes.com/ceciliarodriguez/files/2018/01/moncler-dog-jackets-mondog-.jpg",
+  },
+  {
+    url: "https://media.gucci.com/content/DiaryHeroArticle_Standard_1600x812/1655895611/DiaryHeroArticle_Gucci-Pet-Collection-01_001_Default.jpg",
+  },
+  {
+    url: "https://powerofthepaw.org/wp-content/uploads/2021/02/4-870x400.jpeg",
+  },
+  {
+    url: "https://www.foundanimals.org/wp-content/uploads/2019/01/pet-accessories.jpg",
+  },
+  {
+    url: "https://www.k9ofmine.com/wp-content/uploads/2021/12/dog-modeling-jobs.jpg",
+  },
 ];
 const home = () => {
   const [user, setUser] = useState({} || null);
   const [email, setEmail] = useState("");
 
-
   useEffect(() => {
     onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
-      
     });
   }, []);
   const logOut = async () => {
-
     await signOut(auth);
-    window.location.href='/'
+    window.location.href = "/";
   };
-
 
   return (
     <>
-    <div> 
-   
-             
+      <div>
+        <div className="grid  place-items-center">
+          <SimpleImageSlider
+            width={1600}
+            height={580}
+            images={images}
+            showBullets={true}
+            showNavs={true}
+          />
+        </div>
+      </div>
 
-          <div className='grid  place-items-center'>
-      <SimpleImageSlider
-        width={1600}
-        height={580}
-        images={images}
-        showBullets={true}
-        showNavs={true}
-        
-      />
-    </div>
-
-
-    </div>
-
-
-   
-    <section className="container py-5">
+      <section className="container py-5">
         <div className="row text-center pt-3">
-            <div className="col-lg-6 m-auto">
-                <h1 className="h1">Show your pet the love that he deserve</h1>
-                <p>
-                    
-                </p>
-            </div>
+          <div className="col-lg-6 m-auto">
+            <h1 className="h1">Show your pet the love that he deserve</h1>
+            <p></p>
+          </div>
         </div>
 
-        <div className='justify-content-center'>
-        <div className="row justify-content-center">
+        <div className="justify-content-center">
+          <div className="row justify-content-center">
             <div className="col-10 col-md-3 p-5 mt-3">
-                <a href="#"><img src="https://res.cloudinary.com/dnwi9wvci/image/upload/v1671116336/2022-Holiday-P1-HolidayShop-Dog-Deals_hd0lgp.jpg" className="rounded-circle img-fluid border"/></a>
-                <h5 className="text-center mt-3 mb-3" style={{width:"224px"}}>Dogs</h5>
-                <p className="text-center"><a className="btn btn-success " >Go Shop</a></p>
+              <a href="#">
+                <img
+                  src="https://res.cloudinary.com/dnwi9wvci/image/upload/v1671116336/2022-Holiday-P1-HolidayShop-Dog-Deals_hd0lgp.jpg"
+                  className="rounded-circle img-fluid border"
+                />
+              </a>
+              <h5 className="text-center mt-3 mb-3" style={{ width: "224px" }}>
+                Dogs
+              </h5>
+              <p className="text-center">
+                <a className="btn btn-success ">Go Shop</a>
+              </p>
             </div>
             <div className="col-12 col-md-3 p-5 mt-3">
-                <a href="#"><img src="https://res.cloudinary.com/dnwi9wvci/image/upload/v1671116391/2022-Holiday-P1-HolidayShop-Cat-Deals_nvknns.jpg" className="rounded-circle img-fluid border"/></a>
-                <h2 className="h5 text-center mt-3 mb-3" style={{width:"224px"}}>Cats</h2>
-                <p className="text-center"><a className="btn btn-success">Go Shop</a></p>
+              <a href="#">
+                <img
+                  src="https://res.cloudinary.com/dnwi9wvci/image/upload/v1671116391/2022-Holiday-P1-HolidayShop-Cat-Deals_nvknns.jpg"
+                  className="rounded-circle img-fluid border"
+                />
+              </a>
+              <h2
+                className="h5 text-center mt-3 mb-3"
+                style={{ width: "224px" }}
+              >
+                Cats
+              </h2>
+              <p className="text-center">
+                <a className="btn btn-success">Go Shop</a>
+              </p>
             </div>
             <div className="col-12 col-md-3 p-5 mt-3">
-                <a href="#"><img src="https://res.cloudinary.com/dnwi9wvci/image/upload/v1671116957/2022-Holiday-P1-HolidayShop-ExploreMore_nswhdh.jpg" className="rounded-circle img-fluid border"/></a>
-                <h2 className="h5 text-center mt-3 mb-3" style={{width:"224px"}}>Accessories</h2>
-                <p className="text-center"><a className="btn btn-success">Go Shop</a></p>
+              <a href="#">
+                <img
+                  src="https://res.cloudinary.com/dnwi9wvci/image/upload/v1671116957/2022-Holiday-P1-HolidayShop-ExploreMore_nswhdh.jpg"
+                  className="rounded-circle img-fluid border"
+                />
+              </a>
+              <h2
+                className="h5 text-center mt-3 mb-3"
+                style={{ width: "224px" }}
+              >
+                Accessories
+              </h2>
+              <p className="text-center">
+                <a className="btn btn-success">Go Shop</a>
+              </p>
             </div>
+          </div>
         </div>
-        </div>
-    </section>
+      </section>
+    </>
+  );
+};
 
-     </>
-  )
-}
-
-export default home
+export default home;
