@@ -36,22 +36,22 @@ const collection = () => {
  
  
   const filter = (para:any) => {
-    axios.get(`http://localHost:5000/user/filter/${para}`).then(res => {
+    axios.get(`http://localHost:5000/product/filter/${para}`).then(res => {
       console.log(res.data);
       
       setAllProducts(res.data)
     })
   }
   const filters = (para:any) => {
-    axios.get(`http://localHost:5000/user/filters/${para}`).then(res => {
+    axios.get(`http://localHost:5000/product/filter/${para}`).then(res => {
       console.log(res.data , "marym" );
       
       setAllProducts(res.data)
     })
   }
-  // const [searching,setSearching]=useState('')
+  const [searching,setSearching]=useState('')
   useEffect(() => {
-    axios.get("http://localHost:5000/user/getAllProduct").then(res => {
+    axios.get("http://localHost:5000/product/getAll").then(res => {
       setAllProducts(res.data)
       console.log(res.data.message);
       
@@ -167,7 +167,7 @@ const collection = () => {
         </div>
         <div className="row">
          
-        {  allProducts && allProducts.map((e)=>{
+        {  allProducts && allProducts.map((e:any)=>{
          {console.log(allProducts)}
           return (
              <>
@@ -176,14 +176,14 @@ const collection = () => {
               <div className="card rounded-0">
                 <img id="im"
                   className="card-img rounded-0 img-fluid"
-                  src={e.Pimage}
+                  src={e.image}
                   
                 />
                 
               </div>
               <div className="card-body">
                 <a id="name" href="/singlCollect" className="h3 text-decoration-none animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent font-black">
-                {e.Pname}
+                {e.name}
               
                 
                 </a>
@@ -206,7 +206,7 @@ const collection = () => {
                     <i className="text-muted fa fa-star" />
                   </li>
                 </ul>
-                <p className="text-center mb-0">${e.Pprice}</p>
+                <p className="text-center mb-0">${e.price}</p>
               </div>
             </div>
           </div>

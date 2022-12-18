@@ -12,7 +12,7 @@ import axios from "axios";
 const signup = () => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
-  const [image, setImage] = useState("");
+
   const routes= useRouter()
   const [password, setPassword] = useState("");
   const [user, setUser] = useState({} || null);
@@ -30,10 +30,10 @@ const signup = () => {
   const addUserToDB = () => {
      axios
        .post("http://localhost:5000/user/signup", {
-         Uname: name,
-         Uemail: email,
-         Uimage: image,
-         Upassword: password,
+         name: name,
+         email: email,
+        
+         password: password,
        })
        .then((res) => {
          console.log(res.data);
@@ -102,7 +102,7 @@ const signup = () => {
                             onChange={(e: any) => setName(e.target.value)}
                           />
                         </div>
-                        <div className="mb-4">
+                        {/* <div className="mb-4">
                           <input
                             type="text"
                             className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
@@ -112,7 +112,7 @@ const signup = () => {
                             name="image"
                             onChange={(e: any) => setImage(e.target.value)}
                           />
-                        </div>
+                        </div> */}
                         <div className="mb-4">
                           <input
                             type="text"
