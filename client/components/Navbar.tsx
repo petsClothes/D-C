@@ -38,6 +38,9 @@ function Navbar() {
           <Link href="/signup" className="p-2 text-dark no-underline hover:underline">
           Signup
           </Link>
+          {/* <Link href="/signup" className="p-2 text-dark no-underline hover:underline">
+          logout
+          </Link> */}
         </div>
       </nav>
     </div>

@@ -10,22 +10,22 @@ const ProductsDummy = [
       "Your pet is the gift that keeps on giving! Dress them up just like the gift they are with this gift box costume thats the perfect addition to any pet s winter wardrobe. With a wrapping-paper pattern all over and a big green bow on the back, they ll look just like a present when they nap beside your tree. This is the perfect look to spread some cheer at holiday parties or for adorable family photo ops this winter!"
   },
   {
-    "Pname": "RINGO",
-    "Ptype": "cats",
-    "Pcategorie": "coats&jackets",
-    "Pimage":
+    "name": "RINGO",
+    "type": "cats",
+    "categorie": "coats&jackets",
+    "image":
       "https://res.cloudinary.com/duqxezt6m/image/upload/v1671022999/268424_MAIN._AC_SL600_V1661271918__uydcwy.jpg",
-    "Pprice": 219.99,
-    "Pdesciption": "Dapper meets jolly with this adorably classic Fair Isle sweater. Perfect for cats and dogs alike, slip it on to impress all the holiday partygoers with the pull-over design. Made of 100% acrylic, its just the right amount of comfy and cozy. It comes in many sizes so you can find the perfect fit for your furry one. Plus, the built-in leash hole lets you leash up and go whenever your pet needs a walk."
+    "price": 219.99,
+    "desciption": "Dapper meets jolly with this adorably classic Fair Isle sweater. Perfect for cats and dogs alike, slip it on to impress all the holiday partygoers with the pull-over design. Made of 100% acrylic, its just the right amount of comfy and cozy. It comes in many sizes so you can find the perfect fit for your furry one. Plus, the built-in leash hole lets you leash up and go whenever your pet needs a walk."
   },
   {
-    "Pname": "GLIGO",
-    "Ptype": "cats",
-    "Pcategorie": "coats&jackets",
-    "Pimage":
+    "name": "GLIGO",
+    "type": "cats",
+    "categorie": "coats&jackets",
+    "image":
       "https://res.cloudinary.com/duqxezt6m/image/upload/v1671023281/353886_MAIN._AC_SL600_V1659010616__nkkuzs.jpg",
-    "Pprice": 56.99,
-    "Pdesciption": "Your four-legged friend is going to look absolutely dashing in this classic, fair isle snowflake sweater, from Frisco by Chewy! Easily dress your pet for the season with this warm, adorable pullover sweater that features red-and-black color-blocking and a red snowflake pattern. The acrylic knit is machine washable so keeping it clean is as simple as throwing it in so its ready to wear again."
+    "price": 56.99,
+    "desciption": "Your four-legged friend is going to look absolutely dashing in this classic, fair isle snowflake sweater, from Frisco by Chewy! Easily dress your pet for the season with this warm, adorable pullover sweater that features red-and-black color-blocking and a red snowflake pattern. The acrylic knit is machine washable so keeping it clean is as simple as throwing it in so its ready to wear again."
   },
   {
     "Pname": "POLARIS",
