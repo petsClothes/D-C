@@ -9,9 +9,6 @@ import {
 } from "firebase/auth";
 import { auth } from "../firebase-config.js";
 import axios from "axios";
-// import { useNavigate } from "react-router-dom";
-// const navigate = useNavigate();
-
 const login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -91,7 +88,7 @@ const login = () => {
       alert("Password reset link sent!");
     } catch (err) {
       console.error(err);
-      alert(err.message);
+      // alert(err.message);
     }
   };
   // const  getCurrentUser =() =>{
