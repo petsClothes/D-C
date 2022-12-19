@@ -17,7 +17,7 @@ import {
 import { auth } from "../firebase-config.js";
 
 
-const collection = () => {
+const AllProduct = () => {
  const router = useRouter()
   const [allProducts, setAllProducts] = useState([])
   const [user, setUser] = useState({} || null);
@@ -635,4 +635,4 @@ const collection = () => {
         
 
 
-export default collection;
+export default AllProduct;
