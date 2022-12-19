@@ -22,9 +22,10 @@ const db ="mongodb+srv://Ahmedhenchiri:UvZZCyLXCJU7in18@cluster0.yzf24ly.mongodb
     .then((res) => console.log("data connected"))
     .catch((err) => console.log(err))
 
-
-
-const PORT = 5000;
+ 
+app.use("/user",dcrouter)
+app.use("/product",dcrouter)
+const PORT = 3002;
 
 app.listen(PORT, function () {
   console.log("server run http://localhost/:" + PORT);

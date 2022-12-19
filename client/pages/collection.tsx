@@ -36,14 +36,14 @@ const collection = () => {
  
  
   const filter = (para:any) => {
-    axios.get(`http://localHost:5000/product/filter/${para}`).then(res => {
+    axios.get(`http://localHost:3002/user/filter/${para}`).then(res => {
       console.log(res.data);
       
       setAllProducts(res.data)
     })
   }
   const filters = (para:any) => {
-    axios.get(`http://localHost:5000/product/filter/${para}`).then(res => {
+    axios.get(`http://localHost:3002/user/filters/${para}`).then(res => {
       console.log(res.data , "marym" );
       
       setAllProducts(res.data)
@@ -51,19 +51,61 @@ const collection = () => {
   }
   const [searching,setSearching]=useState('')
   useEffect(() => {
-    axios.get("http://localHost:5000/product/getAll").then(res => {
+    axios.get("http://localHost:3002/user/getAllProduct").then(res => {
       setAllProducts(res.data)
       console.log(res.data.message);
       
     })
   }, [])
-  console.log(allProducts,"aziz");
+  console.log(allProducts,"ahlem");
   
   
 
   return (
     <div>
-      
+      <nav
+        className="relative flex h-12 items-center px-4 justify-between shadow-md dark:shadow-gray-700"
+        style={{ height: "70px" }}
+      >
+        <img
+          src="https://res.cloudinary.com/dnwi9wvci/image/upload/v1670936284/1_rdfnhm.png"
+          className="logo"
+          style={{ width: "200px", height: "170px" }}
+          alt=""
+        />
+
+        <div>
+          <Link href="/home" className="p-2 text-dark no-underline hover:underline">
+            Home
+          </Link>
+          <Link href="/collection" className="p-2 text-dark no-underline hover:underline">
+            Collection
+          </Link>
+
+          <Link href="/store" className="p-2 text-dark no-underline hover:underline">
+            Store
+          </Link>
+          <Link href="/cart" className="p-2 text-dark no-underline hover:underline">
+            cart
+          </Link>
+          <Link href="/aboutus" className="p-2 text-dark no-underline hover:underline">
+            About us
+          </Link>
+          {user ? (
+            <div>
+              
+              <Link href="" className="p-2 text-dark">
+                <button onClick={logOut}>log out</button>
+              </Link>
+            </div>
+          ) : ( 
+            <Link href="/login" className="p-2 text-dark">
+              Login
+            </Link>
+           )} 
+
+        </div>
+      </nav>
      
        <div className="h-175 d-flex align-items-center justify-content-center" >
             <div className='row align-items-center'>
@@ -167,7 +209,7 @@ const collection = () => {
         </div>
         <div className="row">
          
-        {  allProducts && allProducts.map((e:any)=>{
+        {  allProducts && allProducts.map((e)=>{
          {console.log(allProducts)}
           return (
              <>
